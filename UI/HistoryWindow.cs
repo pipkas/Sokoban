@@ -39,19 +39,17 @@ public class HistoryWindow : Window
             }
         };
 
-        // Основной layout
         var layoutGrid = new Grid
         {
             RowDefinitions =
             {
-                new RowDefinition(GridLength.Auto), // текст
-                new RowDefinition(new GridLength(1, GridUnitType.Star)) // таблица
+                new RowDefinition(GridLength.Auto),
+                new RowDefinition(new GridLength(1, GridUnitType.Star)) 
             },
             HorizontalAlignment = HorizontalAlignment.Stretch,
             VerticalAlignment = VerticalAlignment.Stretch
         };
 
-        // Верхний текст
         var complLevelsCount = progInfo.User.LevelsStats.Count;
         var levelsCompletedText = new TextBlock
         {
@@ -127,7 +125,6 @@ public class HistoryWindow : Window
 
         grid.Children.Add(layoutGrid);
 
-        // Кнопка "Назад" — левый нижний угол
         var backButton = new Button
         {
             Content = T("back"),

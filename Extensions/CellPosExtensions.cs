@@ -9,5 +9,4 @@ public static class CellPosExtensions
     {
         return new CellPos(CellPos.X + direction.Dx, CellPos.Y + direction.Dy);
     }
-
 } 

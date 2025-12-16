@@ -8,9 +8,9 @@ namespace Sokoban.Models;
 
 public class GameSession
 {
-    public LevelStatus Level;
-    public int MoveCount = 0;
-    public Player Player;
+    public LevelStatus Level {get; private set;}
+    public int MoveCount {get; private set;} = 0;
+    public Player Player {get; private set;}
     private readonly Stopwatch stopwatch = new();
     public bool IsPaused {get; private set;} = false;
     public bool IsGameOver {get; private set;} = false;

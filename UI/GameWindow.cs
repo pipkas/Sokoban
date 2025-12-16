@@ -245,7 +245,6 @@ public class GameWindow : Window
         statsPanel.Children.Add(movesText);
         mainStackPanel.Children.Add(statsPanel);
 
-        // Кнопки
         var buttonsPanel = new StackPanel
         {
             Orientation = Orientation.Horizontal,

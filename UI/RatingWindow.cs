@@ -19,7 +19,6 @@ public class RatingWindow : Window
     {
         this.progInfo = progInfo;
 
-        // Переведённый заголовок
         Title = T("rating");
         Width = progInfo.Settings.WindowWidth;
         Height = progInfo.Settings.WindowHeight;
@@ -28,7 +27,6 @@ public class RatingWindow : Window
         Content = CreateContent();
     }
 
-    // Метод для перевода
     private string T(string key) =>
         progInfo.Settings.Translations[progInfo.Settings.Language]
             .TryGetValue(key, out var value) ? value : key;
@@ -59,7 +57,7 @@ public class RatingWindow : Window
 
         var placeText = new TextBlock
         {
-            Text = string.Format(T("youAreInPlace"), place), // можно добавить ключ "youAreInPlace" в Translations
+            Text = string.Format(T("youAreInPlace"), place),
             FontSize = 24,
             FontWeight = FontWeight.Bold,
             HorizontalAlignment = HorizontalAlignment.Center,
@@ -68,7 +66,6 @@ public class RatingWindow : Window
         if (users.Any(u => u.Nickname == progInfo.User.Nickname))
             rootGrid.Children.Add(placeText);
 
-        // Таблица
         var dataGrid = new DataGrid
         {
             AutoGenerateColumns = false,
@@ -132,7 +129,6 @@ public class RatingWindow : Window
         return grid;
     }
 
-    // Вспомогательный класс для таблицы
     private class RatingItem
     {
         public int Place { get; set; }

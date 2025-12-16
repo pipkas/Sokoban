@@ -44,7 +44,6 @@ public class MainMenuWindow : Window
             }
         };
 
-        // Кнопка "Выйти" в верхнем левом углу
         var exitButton = CreateStyledButton(T("exit"), Brushes.LightCoral, Brushes.DarkRed);
         exitButton.HorizontalAlignment = HorizontalAlignment.Left;
         exitButton.VerticalAlignment = VerticalAlignment.Top;
@@ -57,7 +56,6 @@ public class MainMenuWindow : Window
         };
         grid.Children.Add(exitButton);
 
-        // Кнопка "Настройки" в верхнем правом углу
         var settingsButton = CreateStyledButton(T("language"), Brushes.LightGray, Brushes.DarkGray);
         settingsButton.HorizontalAlignment = HorizontalAlignment.Right;
         settingsButton.VerticalAlignment = VerticalAlignment.Top;
@@ -105,7 +103,6 @@ public class MainMenuWindow : Window
         };
         grid.Children.Add(historyButton);
 
-        // Кнопка "Рейтинг" внизу справа
         var ratingButton = CreateStyledButton(T("rating"), Brushes.LightYellow, Brushes.DarkGoldenrod);
         ratingButton.Width = 200;
         ratingButton.Height = 60;

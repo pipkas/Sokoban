@@ -52,14 +52,13 @@ public class NicknameInputWindow : Window
             }
         };
 
-        // Центральная панель
         var centerPanel = new StackPanel
         {
             HorizontalAlignment = HorizontalAlignment.Center,
             VerticalAlignment = VerticalAlignment.Center,
             Spacing = 30,
             Width = 400,
-            Margin = new Thickness(0, 0, 0, 80) // отступ снизу, чтобы не перекрывалась кнопкой
+            Margin = new Thickness(0, 0, 0, 80)
         };
 
         var titleText = new TextBlock

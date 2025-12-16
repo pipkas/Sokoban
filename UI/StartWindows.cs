@@ -82,22 +82,18 @@ public class StartWindow : Window
         };
         centerPanel.Children.Add(titleText);
 
-        // Панель кнопок
         var buttonPanel = new StackPanel
         {
             Spacing = 20,
             HorizontalAlignment = HorizontalAlignment.Center
         };
 
-        // Кнопка "Играть"
         var playButton = CreateStyledButton(T("play"), Brushes.LightGreen, Brushes.DarkGreen);
         playButton.Click += (s, e) => ShowNicknameInputWindow();
 
-        // Кнопка "Правила"
         var rulesButton = CreateStyledButton(T("rules"), Brushes.LightBlue, Brushes.DarkBlue);
         rulesButton.Click += (s, e) => ShowRulesWindow();
 
-        // Кнопка "Выйти"
         var exitButton = CreateStyledButton(T("exit"), Brushes.LightCoral, Brushes.DarkRed);
         exitButton.Click += (s, e) => Close();
 
